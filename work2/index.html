@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>南阳我的家 - 欢迎来到南阳</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-blue-800 flex items-center">
+        <i class="fa fa-map-marker-alt mr-2 text-orange-500"></i>
+        <span>南阳我的家</span>
+      </a>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="nav-link active">首页</a>
+        <a href="attractions.html" class="nav-link">景点介绍</a>
+        <a href="culture.html" class="nav-link">文化美食</a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+        <a href="index.html" class="mobile-nav-link active">首页</a>
+        <a href="attractions.html" class="mobile-nav-link">景点介绍</a>
+        <a href="culture.html" class="mobile-nav-link">文化美食</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 英雄区域 -->
+  <header class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://picsum.photos/id/1031/1920/1080" alt="南阳城市风景" 
+           class="w-full h-full object-cover hero-image">
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-black/40"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 z-10 text-center">
+      <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold text-white mb-6 leading-tight animate-fadeIn">
+        南阳我的家
+      </h1>
+      <p class="text-[clamp(1rem,3vw,1.5rem)] text-white/90 mb-10 max-w-3xl mx-auto animate-fadeIn" style="animation-delay: 0.3s">
+        探索这座历史文化名城的独特魅力，感受千年文明的传承与现代发展的脉搏
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fadeIn" style="animation-delay: 0.6s">
+        <a href="#about" class="btn-primary px-8 py-3 rounded-full text-white bg-orange-500 hover:bg-orange-600 transition-all transform hover:scale-105 shadow-lg">
+          了解南阳
+        </a>
+        <a href="attractions.html" class="btn-secondary px-8 py-3 rounded-full text-white bg-transparent border-2 border-white hover:bg-white/10 transition-all transform hover:scale-105 shadow-lg">
+          探索景点
+        </a>
+      </div>
+    </div>
+    
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <a href="#about" class="text-white text-4xl opacity-80 hover:opacity-100 transition-opacity">
+        <i class="fa fa-chevron-down"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- 关于南阳部分 -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-gray-800 mb-4">南阳概览</h2>
+        <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">南阳，一座充满历史韵味与现代活力的城市，让我们一起探索她的独特魅力</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">千年古城，文化重镇</h3>
+          <p class="text-gray-600 mb-6">南阳位于河南省西南部，是国家历史文化名城，有着2000多年的建城史。这里是楚汉文化的重要发祥地，孕育了众多历史名人。</p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <div class="text-orange-500 text-3xl mb-3">
+                <i class="fa fa-university"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">历史悠久</h4>
+              <p class="text-gray-600">拥有超过2000年的建城历史，是中原地区重要的文化中心</p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <div class="text-orange-500 text-3xl mb-3">
+                <i class="fa fa-map-signs"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">地理位置</h4>
+              <p class="text-gray-600">位于豫鄂陕三省交界处，是中原经济区重要的交通枢纽</p>
+            </div>
+          </div>
+          
+          <a href="attractions.html" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-600 transition-colors">
+            探索更多景点 <i class="fa fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        
+        <div class="order-1 md:order-2 relative">
+          <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+            <img src="https://picsum.photos/id/1035/800/600" alt="南阳城市风光" class="w-full h-auto rounded-xl">
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-orange-500 rounded-xl -z-0 opacity-20"></div>
+          <div class="absolute -top-6 -left-6 w-48 h-48 bg-blue-800 rounded-xl -z-0 opacity-20"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据统计部分 -->
+  <section class="py-16 bg-blue-800 text-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="counter-item">
+          <div class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="2000">0</div>
+          <p class="text-white/80">年历史</p>
+        </div>
+        
+        <div class="counter-item">
+          <div class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="12">0</div>
+          <p class="text-white/80">国家级景区</p>
+        </div>
+        
+        <div class="counter-item">
+          <div class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="108">0</div>
+          <p class="text-white/80">特色美食</p>
+        </div>
+        
+        <div class="counter-item">
+          <div class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="1200">0</div>
+          <p class="text-white/80">万人口</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 景点预览部分 -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-gray-800 mb-4">探索南阳景点</h2>
+        <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">南阳拥有众多令人惊叹的自然景观和历史文化遗迹，等待您的探索</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- 景点卡片 1 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://picsum.photos/id/1036/600/400" alt="武侯祠" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">武侯祠</h3>
+              <p class="text-white/80 text-sm">中国著名历史遗迹</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">南阳武侯祠是纪念三国时期著名政治家、军事家诸葛亮的重要历史遗迹，被誉为"天下第一武侯祠"。</p>
+            <a href="attractions.html#wuhouci" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-600 transition-colors">
+              了解更多 <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- 景点卡片 2 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://picsum.photos/id/1039/600/400" alt="丹江口水库" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">丹江口水库</h3>
+              <p class="text-white/80 text-sm">亚洲最大人工淡水湖</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">丹江口水库是亚洲最大的人工淡水湖，也是南水北调中线工程的水源地，湖光山色美不胜收。</p>
+            <a href="attractions.html#danjiangkou" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-600 transition-colors">
+              了解更多 <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- 景点卡片 3 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://picsum.photos/id/1037/600/400" alt="宝天曼" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">宝天曼</h3>
+              <p class="text-white/80 text-sm">国家级自然保护区</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">宝天曼国家级自然保护区拥有丰富的动植物资源，被誉为"天然基因库"，是生态旅游的绝佳去处。</p>
+            <a href="attractions.html#baotianman" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-600 transition-colors">
+              了解更多 <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="attractions.html" class="btn-primary px-8 py-3 rounded-full text-white bg-orange-500 hover:bg-orange-600 transition-all transform hover:scale-105 shadow-lg inline-flex items-center">
+          查看全部景点 <i class="fa fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文化美食预览部分 -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-gray-800 mb-6">南阳文化与美食</h2>
+          <p class="text-gray-600 mb-8 text-lg">南阳不仅有着悠久的历史和美丽的自然风光，还拥有独特的地方文化和令人垂涎的美食。</p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-orange-100 p-3 rounded-full mr-4">
+                <i class="fa fa-utensils text-orange-500 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">特色美食</h3>
+                <p class="text-gray-600">南阳美食融合了中原地区的风味特色，以面食、肉食和汤类为主，口感醇厚，独具一格。</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fa fa-music text-blue-800 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">传统艺术</h3>
+                <p class="text-gray-600">南阳拥有丰富的非物质文化遗产，如南阳玉雕、汉画、曲艺等，展现了当地人民的智慧和创造力。</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-green-100 p-3 rounded-full mr-4">
+                <i class="fa fa-calendar-alt text-green-600 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">民俗节庆</h3>
+                <p class="text-gray-600">南阳的传统节庆活动丰富多彩，如春节社火、元宵节灯会、清明节踏青等，充满了浓厚的地方特色。</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8">
+            <a href="culture.html" class="btn-primary px-6 py-3 rounded-full text-white bg-orange-500 hover:bg-orange-600 transition-all transform hover:scale-105 shadow-lg inline-flex items-center">
+              探索文化与美食 <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <img src="https://picsum.photos/id/1080/600/400" alt="南阳玉雕" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="p-4 bg-white">
+                <h4 class="font-bold text-gray-800">南阳玉雕</h4>
+              </div>
+            </div>
+            
+            <div class="rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <img src="https://picsum.photos/id/1081/600/400" alt="南阳烩面" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="p-4 bg-white">
+                <h4 class="font-bold text-gray-800">南阳烩面</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="space-y-4 mt-8">
+            <div class="rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <img src="https://picsum.photos/id/1082/600/400" alt="南阳汉画" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="p-4 bg-white">
+                <h4 class="font-bold text-gray-800">南阳汉画</h4>
+              </div>
+            </div>
+            
+            <div class="rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <img src="https://picsum.photos/id/1083/600/400" alt="南阳油茶" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="p-4 bg-white">
+                <h4 class="font-bold text-gray-800">南阳油茶</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 订阅部分 -->
+  <section class="py-16 bg-blue-800 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="https://picsum.photos/id/1031/1920/1080" alt="" class="w-full h-full object-cover">
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6">订阅获取南阳最新资讯</h2>
+        <p class="text-white/80 text-lg mb-8">加入我们的邮件列表，及时了解南阳的旅游活动、文化节庆和美食推荐</p>
+        
+        <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+          <input type="email" placeholder="输入您的邮箱地址" class="flex-1 px-4 py-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-500">
+          <button type="submit" class="px-6 py-3 rounded-full bg-orange-500 hover:bg-orange-600 transition-all transform hover:scale-105 shadow-lg">
+            立即订阅
+          </button>
+        </form>
+        
+        <p class="text-white/60 text-sm mt-4">我们尊重您的隐私，不会向第三方分享您的信息</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <a href="index.html" class="text-2xl font-bold text-white flex items-center mb-4">
+            <i class="fa fa-map-marker-alt mr-2 text-orange-500"></i>
+            <span>南阳我的家</span>
+          </a>
+          <p class="text-gray-400 mb-6">探索这座历史文化名城的独特魅力，感受千年文明的传承与现代发展的脉搏。</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fa fa-weixin text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fa fa-weibo text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fa fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fa fa-youtube text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">快速链接</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+            <li><a href="attractions.html" class="text-gray-400 hover:text-white transition-colors">景点介绍</a></li>
+            <li><a href="culture.html" class="text-gray-400 hover:text-white transition-colors">文化美食</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">旅游攻略</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">关于我们</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">景点分类</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">历史古迹</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">自然风光</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">文化艺术</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">主题公园</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">美食体验</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">联系我们</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fa fa-map-marker-alt text-orange-500 mt-1 mr-3"></i>
+              <span class="text-gray-400">河南省南阳市卧龙区中州中路291号</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-phone text-orange-500 mr-3"></i>
+              <span class="text-gray-400">0377-12345678</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-envelope text-orange-500 mr-3"></i>
+              <span class="text-gray-400">info@nanyangtourism.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 南阳我的家. 保留所有权利.</p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">隐私政策</a>
+            <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">使用条款</a>
+            <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookie政策</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+    

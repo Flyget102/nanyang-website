@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>南阳我的家 - 文化美食</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-blue-800 flex items-center">
+        <i class="fa fa-map-marker-alt mr-2 text-orange-500"></i>
+        <span>南阳我的家</span>
+      </a>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="nav-link">首页</a>
+        <a href="attractions.html" class="nav-link">景点介绍</a>
+        <a href="culture.html" class="nav-link active">文化美食</a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+        <a href="index.html" class="mobile-nav-link">首页</a>
+        <a href="attractions.html" class="mobile-nav-link">景点介绍</a>
+        <a href="culture.html" class="mobile-nav-link active">文化美食</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 英雄区域 -->
+  <header class="relative h-64 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://picsum.photos/id/1080/1920/800" alt="南阳文化美食" 
+           class="w-full h-full object-cover hero-image">
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-black/40"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 z-10 text-center">
+      <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-white mb-4 leading-tight">
+        南阳文化与美食
+      </h1>
+      <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-3xl mx-auto">
+        探索南阳独特的地域文化和令人垂涎的传统美食，感受这座城市的独特魅力
+      </p>
+    </div>
+  </header>
+
+  <!-- 文化介绍 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-gray-800 mb-4">南阳文化</h2>
+        <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">南阳拥有悠久的历史和丰富的文化遗产，是中原文化的重要组成部分</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">南阳玉雕</h3>
+          <p class="text-gray-600 mb-6">南阳玉雕历史悠久，技艺精湛，是中国四大名玉之一。南阳玉雕以其造型优美、工艺精湛、色彩绚丽而闻名于世，被誉为"东方艺术瑰宝"。</p>
+          <p class="text-gray-600 mb-6">南阳玉雕作品题材广泛，包括人物、花鸟、山水、器皿等，造型逼真，栩栩如生。玉雕艺人在创作过程中，注重因材施艺，巧妙利用玉石的天然色彩和纹理，使作品具有独特的艺术魅力。</p>
+          <a href="#" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-600 transition-colors">
+            了解更多 <i class="fa fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        <div class="relative">
+          <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl">
+            <img src="https://picsum.photos/id/1081/800/600" alt="南阳玉雕" class="w-full h-auto">
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-orange-500 rounded-xl -z-0 opacity-20"></div>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">南阳汉画</h3>
+          <p class="text-gray-600 mb-6">南阳汉画是中国汉代画像石艺术的杰出代表，主要分布在南阳市及周边地区。南阳汉画题材广泛，内容丰富，包括神话传说、历史故事、社会生活等各个方面，是研究汉代社会、文化、艺术的重要资料。</p>
+          <p class="text-gray-600 mb-6">南阳汉画以其造型生动、线条流畅、构图巧妙而著称，具有很高的艺术价值。汉画中的人物、动物形象栩栩如生，动作姿态自然优美，展现了汉代艺术家高超的技艺水平。</p>
+          <a href="#" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-600 transition-colors">
+            了解更多 <i class="fa fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        <div class="order-1 md:order-2 relative">
+          <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl">
+            <img src="https://picsum.photos/id/1082/800/600" alt="南阳汉画" class="w-full h-auto">
+          </div>
+          <div class="absolute -top-6 -left-6 w-48 h-48 bg-blue-800 rounded-xl -z-0 opacity-20"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 美食介绍 -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-gray-800 mb-4">南阳美食</h2>
+        <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">南阳美食独具特色，融合了中原地区的饮食文化，口味醇厚，风味独特</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- 美食卡片 1 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://picsum.photos/id/1083/800/600" alt="南阳烩面" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">南阳烩面</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">南阳烩面是河南省特色美食之一，以其汤浓、面筋、菜鲜而闻名。烩面的汤是用羊肉、骨头等长时间熬制而成，汤汁浓郁，香气扑鼻。</p>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star-half-alt text-yellow-400"></i>
+                <span class="ml-2 text-sm text-gray-600">4.5分</span>
+              </div>
+              <a href="#" class="text-orange-500 font-medium hover:text-orange-600 transition-colors">
+                查看详情 <i class="fa fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 美食卡片 2 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://picsum.photos/id/1084/800/600" alt="淅川鱼宴" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">淅川鱼宴</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">淅川鱼宴是南阳地区的特色美食，以丹江口水库的鲜鱼为主要原料，采用多种烹饪方法制作而成，口味鲜美，营养丰富。</p>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <span class="ml-2 text-sm text-gray-600">4.9分</span>
+              </div>
+              <a href="#" class="text-orange-500 font-medium hover:text-orange-600 transition-colors">
+                查看详情 <i class="fa fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 美食卡片 3 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://picsum.photos/id/1085/800/600" alt="方城烩面" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">方城烩面</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">方城烩面是南阳方城县的传统美食，以其面筋道、汤鲜美、配菜丰富而著称。方城烩面的面条是手工擀制而成，口感筋道有嚼劲。</p>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star-half-alt text-yellow-400"></i>
+                <span class="ml-2 text-sm text-gray-600">4.6分</span>
+              </div>
+              <a href="#" class="text-orange-500 font-medium hover:text-orange-600 transition-colors">
+                查看详情 <i class="fa fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 美食卡片 4 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://picsum.photos/id/1086/800/600" alt="新野板面" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">新野板面</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">新野板面是南阳新野县的传统美食，以其面条宽、汤味辣、配料丰富而著称。新野板面的面条是手工拉制而成，口感筋道有嚼劲。</p>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <span class="ml-2 text-sm text-gray-600">4.8分</span>
+              </div>
+              <a href="#" class="text-orange-500 font-medium hover:text-orange-600 transition-colors">
+                查看详情 <i class="fa fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 美食卡片 5 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://picsum.photos/id/1087/800/600" alt="社旗油茶" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">社旗油茶</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">社旗油茶是南阳社旗县的传统美食，以其香浓可口、营养丰富而著称。社旗油茶的主要原料有面粉、芝麻、花生、核桃等，经过炒制、研磨等多道工序制作而成。</p>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star-half-alt text-yellow-400"></i>
+                <span class="ml-2 text-sm text-gray-600">4.5分</span>
+              </div>
+              <a href="#" class="text-orange-500 font-medium hover:text-orange-600 transition-colors">
+                查看详情 <i class="fa fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 美食卡片 6 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://picsum.photos/id/1088/800/600" alt="唐河凉粉" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">唐河凉粉</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">唐河凉粉是南阳唐河县的传统美食，以其清凉爽口、口感细腻而著称。唐河凉粉的主要原料是绿豆粉，经过浸泡、磨浆、煮制等多道工序制作而成。</p>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <i class="fa fa-star text-yellow-400"></i>
+                <span class="ml-2 text-sm text-gray-600">4.7分</span>
+              </div>
+              <a href="#" class="text-orange-500 font-medium hover:text-orange-600 transition-colors">
+                查看详情 <i class="fa fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="#" class="btn-primary px-8 py-3 rounded-full text-white bg-orange-500 hover:bg-orange-600 transition-all transform hover:scale-105 shadow-lg inline-flex items-center">
+          查看更多美食 <i class="fa fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 美食街景 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-gray-800 mb-4">南阳美食街</h2>
+        <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">探索南阳热闹的美食街区，品尝地道的南阳美食</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="overflow-hidden rounded-xl group">
+          <img src="https://picsum.photos/id/1089/600/800" alt="南阳美食街" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="overflow-hidden rounded-xl group">
+          <img src="https://picsum.photos/id/1090/600/800" alt="南阳美食街" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="overflow-hidden rounded-xl group">
+          <img src="https://picsum.photos/id/1091/600/800" alt="南阳美食街" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="overflow-hidden rounded-xl group">
+          <img src="https://picsum.photos/id/1092/600/800" alt="南阳美食街" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <a href="index.html" class="text-2xl font-bold text-white flex items-center mb-4">
+            <i class="fa fa-map-marker-alt mr-2 text-orange-500"></i>
+            <span>南阳我的家</span>
+          </a>
+          <p class="text-gray-400 mb-6">探索这座历史文化名城的独特魅力，感受千年文明的传承与现代发展的脉搏。</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fa fa-weixin text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fa fa-weibo text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fa fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fa fa-youtube text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">快速链接</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+            <li><a href="attractions.html" class="text-gray-400 hover:text-white transition-colors">景点介绍</a></li>
+            <li><a href="culture.html" class="text-gray-400 hover:text-white transition-colors">文化美食</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">旅游攻略</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">关于我们</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">景点分类</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">历史古迹</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">自然风光</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">文化艺术</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">主题公园</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">美食体验</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">联系我们</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fa fa-map-marker-alt text-orange-500 mt-1 mr-3"></i>
+              <span class="text-gray-400">河南省南阳市卧龙区中州中路291号</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-phone text-orange-500 mr-3"></i>
+              <span class="text-gray-400">0377-12345678</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-envelope text-orange-500 mr-3"></i>
+              <span class="text-gray-400">info@nanyangtourism.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 南阳我的家. 保留所有权利.</p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">隐私政策</a>
+            <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">使用条款</a>
+            <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookie政策</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+    
